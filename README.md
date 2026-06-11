@@ -1,5 +1,21 @@
 # READii 讀意｜情緒感知與適性引導學習系統
 
+## 快速看懂
+
+![startup-readii-emotion-learning 功能截圖](docs/preview.png)
+
+- 線上 Demo：https://atlasforcn.github.io/startup-readii-emotion-learning/
+- 這個原型在做什麼：把 READii 做成閱讀時的情緒感知與適性引導學習平台。
+- 特色定位：特色是把學生情緒/專注狀態和教師班級總覽連在一起，形成可追蹤的學習支持。
+- 操作流程：選擇閱讀任務與學生狀態 → 切換情緒/專注並取得引導卡 → 教師查看班級困難標籤與進度報告
+
+<details>
+<summary>展開完整功能流程截圖</summary>
+
+![startup-readii-emotion-learning 完整功能流程截圖](docs/flow.png)
+
+</details>
+
 這是一個可直接用瀏覽器開啟的靜態 demo repo，將 READii 讀意的公開得獎概念延伸成「閱讀／學習時情緒感知與適性引導平台」原型。頁面不是介紹頁，而是可操作的學習工作台：學生可以切換情緒與專注狀態、標記閱讀困難、取得即時引導；教師可以查看班級總覽、學習困難標籤、回饋建議與進度報告。
 
 ## 比賽與案例資訊
