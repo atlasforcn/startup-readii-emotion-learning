@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>READii 讀意｜情緒感知與適性引導學習系統</title>
+    <meta
+      name="description"
+      content="READii 讀意情緒感知與適性引導學習系統的靜態互動 demo。"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="skip-link" href="#main">跳到主要內容</a>
+      <div class="brand-lockup" aria-label="READii 讀意">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <div>
+          <p class="eyebrow">114 年（2025）第二梯次成功案例</p>
+          <h1>READii 讀意</h1>
+          <p class="brand-subtitle">情緒感知與適性引導學習系統</p>
+        </div>
+      </div>
+      <div class="case-ribbon" aria-label="案例資訊">
+        <span>Readii</span>
+        <span>國立中正大學</span>
+        <span>服務文創</span>
+      </div>
+    </header>
+
+    <main id="main" class="workspace">
+      <section class="reader-panel" aria-labelledby="reader-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">學生閱讀任務</p>
+            <h2 id="reader-title">濕地如何替城市降溫？</h2>
+          </div>
+          <div class="progress-dial" aria-label="目前閱讀進度">
+            <span id="progressValue">25%</span>
+            <small>閱讀進度</small>
+          </div>
+        </div>
+
+        <div class="reader-layout">
+          <article class="reading-sheet" aria-label="閱讀文章">
+            <div class="sheet-title">
+              <span>任務 03</span>
+              <strong>找出作者的因果推論</strong>
+            </div>
+            <p class="reading-line is-active" data-segment="0" tabindex="0" role="button">
+              城市中的濕地像一塊會呼吸的海綿。它吸收雨水、降低地表溫度，也讓鳥類與昆蟲有停留的地方。
+            </p>
+            <p class="reading-line" data-segment="1" tabindex="0" role="button">
+              當柏油路面吸收大量熱能，城市夜晚就不容易降溫。濕地植物透過蒸散作用，把部分熱帶回空氣循環中。
+            </p>
+            <p class="reading-line" data-segment="2" tabindex="0" role="button">
+              如果只把濕地看成閒置土地，城市會失去一種緩慢但穩定的保護。保留濕地，其實是在替未來保留調節能力。
+            </p>
+            <div class="reader-actions">
+              <button class="text-button" type="button" id="markStuckBtn">標記這段卡住</button>
+              <button class="primary-button" type="button" id="completeSegmentBtn">完成目前段落</button>
+            </div>
+          </article>
+
+          <aside class="student-controls" aria-label="學生狀態控制">
+            <div class="control-group">
+              <h3>目前情緒</h3>
+              <div class="choice-grid" id="emotionChoices">
+                <button type="button" class="choice is-selected" data-emotion="steady">平穩</button>
+                <button type="button" class="choice" data-emotion="confused">困惑</button>
+                <button type="button" class="choice" data-emotion="anxious">焦慮</button>
+                <button type="button" class="choice" data-emotion="tired">疲倦</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <div class="range-label">
+                <h3>專注度</h3>
+                <output id="focusValue" for="focusSlider">68%</output>
+              </div>
+              <input id="focusSlider" type="range" min="20" max="100" step="4" value="68">
+            </div>
+
+            <div class="control-group">
+              <h3>學習困難標籤</h3>
+              <div class="tag-cloud" id="tagCloud">
+                <button type="button" class="tag" data-tag="詞彙不熟">詞彙不熟</button>
+                <button type="button" class="tag" data-tag="推論斷點">推論斷點</button>
+                <button type="button" class="tag" data-tag="注意力下滑">注意力下滑</button>
+                <button type="button" class="tag" data-tag="情緒壓力">情緒壓力</button>
+                <button type="button" class="tag" data-tag="時間估計失準">時間估計失準</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="guide-panel" aria-labelledby="guide-title">
+        <div class="section-head compact">
+          <div>
+            <p class="section-kicker">即時引導卡</p>
+            <h2 id="guide-title">先穩住節奏，再回到推論</h2>
+          </div>
+          <span class="state-chip" id="stateChip">平穩 · 68%</span>
+        </div>
+        <div class="guide-card">
+          <p id="guideText">
+            目前可以請學生把第一段的「海綿」比喻換成自己的話，接著標出它連到哪個城市問題。
+          </p>
+          <ul class="micro-steps" id="microSteps" aria-label="引導步驟"></ul>
+        </div>
+        <div class="feedback-panel">
+          <h3>回饋建議</h3>
+          <p id="feedbackText">給予短句肯定，再請學生圈出造成降溫的關鍵動詞。</p>
+        </div>
+      </section>
+
+      <section class="teacher-panel" aria-labelledby="teacher-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">教師班級總覽</p>
+            <h2 id="teacher-title">八年二班閱讀溫度</h2>
+          </div>
+          <div class="class-summary" aria-label="班級即時摘要">
+            <span><strong id="steadyCount">2</strong> 平穩</span>
+            <span><strong id="watchCount">3</strong> 需關注</span>
+          </div>
+        </div>
+
+        <div class="teacher-grid">
+          <div class="student-list" id="studentList" aria-label="學生狀態列表"></div>
+
+          <div class="report-panel" aria-label="進度報告">
+            <h3>進度報告</h3>
+            <dl class="report-list">
+              <div>
+                <dt>目前學生</dt>
+                <dd id="reportStudent">林予安</dd>
+              </div>
+              <div>
+                <dt>完成度</dt>
+                <dd id="reportProgress">25%</dd>
+              </div>
+              <div>
+                <dt>主要標籤</dt>
+                <dd id="reportTags">尚未標記</dd>
+              </div>
+              <div>
+                <dt>下一步</dt>
+                <dd id="reportNext">請學生用一句話重述段落主旨。</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-block" aria-labelledby="source-title">
+        <div>
+          <p class="section-kicker">案例來源</p>
+          <h2 id="source-title">大專校院創新創業實戰模擬學習平臺</h2>
+        </div>
+        <div class="source-grid">
+          <p><strong>年度：</strong>114 年（2025）</p>
+          <p><strong>屆次／階段：</strong>第二梯次成功案例</p>
+          <p><strong>團隊／公司：</strong>Readii</p>
+          <p><strong>學校：</strong>國立中正大學</p>
+          <p><strong>類別：</strong>服務文創</p>
+          <p><strong>作品名稱：</strong>READii 讀意｜情緒感知與適性引導學習系統</p>
+          <p class="source-url"><strong>官方來源：</strong><a href="https://ssp.moe.gov.tw/cases/1685">https://ssp.moe.gov.tw/cases/1685</a></p>
+        </div>
+        <p class="disclaimer">免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
