@@ -11,6 +11,40 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- repo-snapshot:start -->
+    <section class="repo-snapshot repo-snapshot--learning" aria-label="專案辨識預覽：READii 讀意" style="--snap-bg: #eef7f4; --snap-bg-2: #d7e9e2; --snap-ink: #1d2c2a; --snap-muted: #65736f; --snap-accent: #2d9f7f; --snap-accent-2: #e0b43c;">
+      <div class="snapshot-copy">
+        <p class="snapshot-kicker">Emotion-aware learning</p>
+        <div class="snapshot-name">READii 讀意</div>
+        <p class="snapshot-tagline">閱讀情緒、理解節點與適性引導並列，讓學習系統在截圖中有明確個性。</p>
+        <div class="snapshot-chips" aria-label="核心辨識元素">
+        <span>閱讀情緒</span>
+        <span>理解節點</span>
+        <span>適性引導</span>
+        </div>
+      </div>
+      <div class="snapshot-scene" aria-hidden="true">
+        <div class="snapshot-device">
+          <div class="snapshot-device-head">
+            <span>Reading pulse</span>
+            <strong>濕地降溫段落卡住</strong>
+          </div>
+          <div class="snapshot-visual snapshot-visual--learning">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="snapshot-data-row">
+          <span><b>72</b>專注</span>
+          <span><b>3</b>提示</span>
+          <span><b>9m</b>閱讀</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- repo-snapshot:end -->
+    <div class="demo-boundary" role="note">
+      <strong>Prototype</strong>
+      <span>靜態互動原型；畫面資料、評分、AI、金流、醫療、法律與安全流程皆為示範，不代表原團隊官方產品或實際服務。</span>
+    </div>
     <header class="topbar">
       <a class="skip-link" href="#main">跳到主要內容</a>
       <div class="brand-lockup" aria-label="READii 讀意">
@@ -154,22 +188,24 @@
         </div>
       </section>
 
-      <section class="source-block" aria-labelledby="source-title">
-        <div>
-          <p class="section-kicker">案例來源</p>
-          <h2 id="source-title">大專校院創新創業實戰模擬學習平臺</h2>
+      <details class="source-block source-disclosure" aria-labelledby="source-title">
+        <summary>
+          <span class="section-kicker">案例來源</span>
+          <strong id="source-title">大專校院創新創業實戰模擬學習平臺｜READii</strong>
+        </summary>
+        <div class="source-body">
+          <div class="source-grid">
+            <p><strong>年度：</strong>114 年（2025）</p>
+            <p><strong>屆次／階段：</strong>第二梯次成功案例</p>
+            <p><strong>團隊／公司：</strong>Readii</p>
+            <p><strong>學校：</strong>國立中正大學</p>
+            <p><strong>類別：</strong>服務文創</p>
+            <p><strong>作品名稱：</strong>READii 讀意｜情緒感知與適性引導學習系統</p>
+            <p class="source-url"><strong>官方來源：</strong><a href="https://ssp.moe.gov.tw/cases/1685">https://ssp.moe.gov.tw/cases/1685</a></p>
+          </div>
+          <p class="disclaimer">免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
         </div>
-        <div class="source-grid">
-          <p><strong>年度：</strong>114 年（2025）</p>
-          <p><strong>屆次／階段：</strong>第二梯次成功案例</p>
-          <p><strong>團隊／公司：</strong>Readii</p>
-          <p><strong>學校：</strong>國立中正大學</p>
-          <p><strong>類別：</strong>服務文創</p>
-          <p><strong>作品名稱：</strong>READii 讀意｜情緒感知與適性引導學習系統</p>
-          <p class="source-url"><strong>官方來源：</strong><a href="https://ssp.moe.gov.tw/cases/1685">https://ssp.moe.gov.tw/cases/1685</a></p>
-        </div>
-        <p class="disclaimer">免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
-      </section>
+      </details>
     </main>
 
     <script src="app.js"></script>
